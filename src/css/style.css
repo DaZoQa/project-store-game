@@ -8,19 +8,35 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  fowe: 400px;
-  color: #F5F5F5;
+  font-weight: 400px;
+  color: #AAAAAA;
   line-height: 113%;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  background-color: #F5F5F5; }
 
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
-  .container > * {
-    padding: 40px;
-    font-size: 25px;
-    color: red; }
+
+.title-1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: white; }
+
+.title-2 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #F5F5F5; }
+
+.title-3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #425844; }
+  .title-3_white {
+    color: white; }
+  .title-3_green-light {
+    color: #61A568; }
 
 .cards {
   background-color: #F5F5F5;
@@ -31,8 +47,28 @@ body {
   grid-column: full-start/col-end 6; }
 
 .features {
+  padding: 15rem 0;
   background-color: #F5F5F5;
-  grid-column: center-start/center-end; }
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 3rem 4rem;
+  align-items: start; }
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 1.5rem 2.5rem; }
+  .feature__icon {
+    grid-row: 1/span 2;
+    width: 4.5rem;
+    height: 4.5rem;
+    transform: translateY(-1rem); }
+  .feature__text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #425844;
+    line-height: 113%; }
 
 .gamers {
   background-color: #101D2C;
