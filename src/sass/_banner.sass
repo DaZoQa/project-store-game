@@ -1,8 +1,24 @@
 .banner
-  grid-column: full-start
   &-img
     background-color: $color-blue-dark
     grid-column: full-start / col-end 4
+    display: grid
+    grid-template-columns: repeat(16, 1fr)
+    grid-template-rows: repeat(24, 1fr)
+    background: url(../img/background.png) center / cover no-repeat
+    &__img-1
+      width: 100%
+      grid-area: 3 / 3 / 12 / 15
+    &__img-2
+      width: 100%
+      grid-area: 10 / 5 / 23 / -1
+      transform: translateX(3.5rem)
   &-text
     background-color: $color-blue-dark
     grid-column: col-start 5 / full-end
+    display: grid
+    align-content: center
+    justify-items: start 
+    padding: 0 4vw 
+    &__text
+      margin-bottom: 4rem

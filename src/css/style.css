@@ -9,7 +9,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400px;
-  color: #AAAAAA;
+  color: #F5F5F5;
   line-height: 113%;
   font-size: 1.6rem;
   background-color: #F5F5F5; }
@@ -19,6 +19,18 @@ body {
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
+.btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #F5F5F5;
+  text-transform: uppercase;
+  background-color: #61A568;
+  border: none;
+  padding: 1.5rem 3rem; }
+  .btn:hover {
+    background-color: #425844; }
+
 .title-1 {
   font-size: 4.5rem;
   font-weight: 700;
@@ -27,7 +39,8 @@ body {
 .title-2 {
   font-size: 4rem;
   font-weight: 700;
-  color: #F5F5F5; }
+  color: #F5F5F5;
+  line-height: 100%; }
 
 .title-3 {
   font-size: 1.9rem;
@@ -37,6 +50,11 @@ body {
     color: white; }
   .title-3_green-light {
     color: #61A568; }
+
+.title-4 {
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: #61A568; }
 
 .cards {
   background-color: #F5F5F5;
@@ -74,14 +92,29 @@ body {
   background-color: #101D2C;
   grid-column: col-start 7/full-end; }
 
-.banner {
-  grid-column: full-start; }
-  .banner-img {
-    background-color: #101D2C;
-    grid-column: full-start/col-end 4; }
-  .banner-text {
-    background-color: #101D2C;
-    grid-column: col-start 5/full-end; }
+.banner-img {
+  background-color: #101D2C;
+  grid-column: full-start/col-end 4;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(24, 1fr);
+  background: url(../img/background.png) center/cover no-repeat; }
+  .banner-img__img-1 {
+    width: 100%;
+    grid-area: 3/3/12/15; }
+  .banner-img__img-2 {
+    width: 100%;
+    grid-area: 10/5/23/-1;
+    transform: translateX(3.5rem); }
+.banner-text {
+  background-color: #101D2C;
+  grid-column: col-start 5/full-end;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  padding: 0 4vw; }
+  .banner-text__text {
+    margin-bottom: 4rem; }
 
 .sidebar {
   background-color: #425844;
@@ -95,5 +128,8 @@ body {
 .footer {
   background-color: #101D2C;
   grid-column: full-start/full-end; }
+
+.mb-sm {
+  margin-bottom: 3rem; }
 
 /*# sourceMappingURL=style.css.map */
