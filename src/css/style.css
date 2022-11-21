@@ -10,7 +10,6 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400px;
   color: #F5F5F5;
-  line-height: 113%;
   font-size: 1.6rem;
   background-color: #F5F5F5; }
 
@@ -76,7 +75,7 @@ body {
   .card__title {
     grid-column: 1/-1;
     grid-row: 1/2;
-    padding: 1.5rem 11.5rem;
+    padding: 1.5rem;
     background-color: #425844;
     font-size: 1.6rem;
     font-weight: 700;
@@ -105,7 +104,36 @@ body {
 
 .header {
   background-color: #101D2C;
-  grid-column: full-start/col-end 6; }
+  grid-column: full-start/col-end 6;
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(10rem, min-content) 1fr;
+  padding: 5rem 5rem 5rem 6rem;
+  background: url(../img/header-bg.png) center/cover no-repeat; }
+  .header__line-text {
+    font-size: 1.6rem;
+    color: #AAAAAA;
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    gap: 0 2rem;
+    align-items: center;
+    margin-bottom: 1.3rem; }
+    .header__line-text::before, .header__line-text::after {
+      content: "";
+      height: 0.1rem;
+      display: block;
+      background-color: #AAAAAA; }
+  .header__img {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 2rem; }
+  .header__img img {
+    height: 2.5rem;
+    filter: brightness(70%); }
+  .header__btn {
+    align-self: start;
+    justify-self: start; }
 
 .logo {
   display: block; }
@@ -140,7 +168,24 @@ body {
 
 .gamers {
   background-color: #101D2C;
-  grid-column: col-start 7/full-end; }
+  grid-column: col-start 7/full-end;
+  display: grid;
+  grid-template-columns: min-content max-content;
+  align-content: center;
+  justify-content: center;
+  gap: 4rem 2rem; }
+  .gamers__title {
+    grid-column: 1/-1;
+    justify-self: center; }
+  .gamers__img {
+    width: 7rem;
+    border-radius: 50%; }
+  .gamers__text {
+    align-self: center; }
+  .gamers__score {
+    font-size: 1.6rem;
+    color: #AAAAAA;
+    font-weight: 300; }
 
 .banner-img {
   background-color: #101D2C;
@@ -169,7 +214,27 @@ body {
 .sidebar {
   background-color: #425844;
   grid-column: sidebar-start/sidebar-end;
-  grid-row: 1/-1; }
+  grid-row: 1/-1;
+  padding-top: 3.7rem;
+  display: flex;
+  justify-content: center; }
+
+.hamburger {
+  border: none;
+  background-color: #F5F5F5;
+  height: 0.2rem;
+  width: 4.5rem;
+  cursor: pointer; }
+  .hamburger::before, .hamburger::after {
+    content: "";
+    background-color: #F5F5F5;
+    display: block;
+    height: 0.2rem;
+    width: 4.5rem; }
+  .hamburger::before {
+    transform: translateY(-1.5rem); }
+  .hamburger::after {
+    transform: translateY(1.5rem); }
 
 .gallery {
   background-color: #101D2C;
