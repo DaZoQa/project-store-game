@@ -107,6 +107,13 @@ body {
   background-color: #101D2C;
   grid-column: full-start/col-end 6; }
 
+.logo {
+  display: block; }
+  .logo__img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 8rem; }
+
 .features {
   padding: 15rem 0;
   background-color: #F5F5F5;
@@ -206,7 +213,28 @@ body {
 
 .footer {
   background-color: #101D2C;
-  grid-column: full-start/full-end; }
+  grid-column: full-start/full-end;
+  padding: 8rem 3rem;
+  border-top: 3px solid #F5F5F5; }
+
+.nav__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  justify-items: center;
+  gap: 3.5rem; }
+.nav__link:link, .nav__link:visited {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #F5F5F5;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.3s;
+  display: inline-block; }
+.nav__link:hover, .nav__link:active {
+  color: #425844;
+  transform: translateY(-0.3rem); }
 
 .mb-sm {
   margin-bottom: 3rem; }
